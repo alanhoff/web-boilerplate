@@ -4,7 +4,7 @@ var json = require('body-parser').json;
 
 app.route('/api/v1/echo')
     .get(function(req, res, next){
-        res.json({hello: 'world', method: req.methd});
+        res.json({hello: 'world', method: req.method});
     })
     .post(json(), function(req, res, next){
         res.json(req.body);
@@ -13,5 +13,5 @@ app.route('/api/v1/echo')
         res.json(req.body);
     })
     .delete(function(req, res, next){
-        res.json({hello: 'world', method: req.methd});
+        res.json({hello: 'world', method: req.method});
     });
